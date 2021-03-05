@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, FlatList } from 'react-native';
+import { StyleSheet, FlatList, Alert } from 'react-native';
 
 import GLOBALS from '../globals';
 import Post1 from '../components/Post1';
@@ -18,6 +18,9 @@ export default function Home(props) {
       reactions: '854',
       shares: '1.8K',
       avatar: Avatar,
+      onLike: () => Alert.alert('Liked'),
+      onShare: () => Alert.alert('Shared'),
+      onComment: () => Alert.alert('Commented'),
     },
     {
       imageType: true,
@@ -30,6 +33,9 @@ export default function Home(props) {
       reactions: '734',
       shares: '8,1M',
       avatar: Avatar,
+      onLike: () => Alert.alert('Liked'),
+      onShare: () => Alert.alert('Shared'),
+      onComment: () => Alert.alert('Commented'),
     },
     {
       imageType: false,
@@ -41,6 +47,9 @@ export default function Home(props) {
       reactions: '854',
       shares: '1.8K',
       avatar: Avatar,
+      onLike: () => Alert.alert('Liked'),
+      onShare: () => Alert.alert('Shared'),
+      onComment: () => Alert.alert('Commented'),
     },
     {
       imageType: true,
@@ -53,6 +62,9 @@ export default function Home(props) {
       reactions: '734',
       shares: '8,1M',
       avatar: Avatar,
+      onLike: () => Alert.alert('Liked'),
+      onShare: () => Alert.alert('Shared'),
+      onComment: () => Alert.alert('Commented'),
     },
     {
       imageType: false,
@@ -64,6 +76,9 @@ export default function Home(props) {
       reactions: '854',
       shares: '1.8K',
       avatar: Avatar,
+      onLike: () => Alert.alert('Liked'),
+      onShare: () => Alert.alert('Shared'),
+      onComment: () => Alert.alert('Commented'),
     },
     {
       imageType: true,
@@ -76,6 +91,9 @@ export default function Home(props) {
       reactions: '734',
       shares: '8,1M',
       avatar: Avatar,
+      onLike: () => Alert.alert('Liked'),
+      onShare: () => Alert.alert('Shared'),
+      onComment: () => Alert.alert('Commented'),
     },
     {
       imageType: false,
@@ -87,6 +105,9 @@ export default function Home(props) {
       reactions: '854',
       shares: '1.8K',
       avatar: Avatar,
+      onLike: () => Alert.alert('Liked'),
+      onShare: () => Alert.alert('Shared'),
+      onComment: () => Alert.alert('Commented'),
     },
     {
       imageType: true,
@@ -99,6 +120,9 @@ export default function Home(props) {
       reactions: '734',
       shares: '8,1M',
       avatar: Avatar,
+      onLike: () => Alert.alert('Liked'),
+      onShare: () => Alert.alert('Shared'),
+      onComment: () => Alert.alert('Commented'),
     },
     {
       imageType: false,
@@ -110,6 +134,9 @@ export default function Home(props) {
       reactions: '854',
       shares: '1.8K',
       avatar: Avatar,
+      onLike: () => Alert.alert('Liked'),
+      onShare: () => Alert.alert('Shared'),
+      onComment: () => Alert.alert('Commented'),
     },
     {
       imageType: true,
@@ -122,6 +149,9 @@ export default function Home(props) {
       reactions: '734',
       shares: '8,1M',
       avatar: Avatar,
+      onLike: () => Alert.alert('Liked'),
+      onShare: () => Alert.alert('Shared'),
+      onComment: () => Alert.alert('Commented'),
     },
   ]);
 

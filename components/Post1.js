@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, View, Image, Text } from 'react-native';
+import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native';
 
 import GLOBALS from '../globals';
 import PhoneDark from '../assets/icons/phone-dark.png';
@@ -157,18 +157,18 @@ export default function Post1(props) {
         </View>
       </View>
       <View style={styles.actions}>
-        <View style={styles.action}>
+        <TouchableOpacity style={styles.action} onPress={props.onLike}>
           <Image style={styles.actionIconLarge} source={PhoneLight} />
           <Text style={styles.actionText}>Destaque</Text>
-        </View>
-        <View style={styles.action}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.action} onPress={props.onShare}>
           <Image style={styles.actionIcon} source={SendLight} />
           <Text style={styles.actionText}>Compartilha</Text>
-        </View>
-        <View style={styles.reaction}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.reaction} onPress={props.onComment}>
           <Image style={styles.actionIcon} source={ChatLight} />
           <Text style={styles.actionText}>Comente</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
