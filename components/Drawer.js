@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
   scrollview: {
     flex: 1,
-    paddingTop: 20,
+    paddingTop: 50,
   },
   logoContainer: {
     height: '20%',

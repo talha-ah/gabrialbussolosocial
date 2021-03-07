@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { StyleSheet, FlatList, Alert } from 'react-native';
+import { StyleSheet, FlatList, Alert, SafeAreaView } from 'react-native';
 
 import GLOBALS from '../globals';
 import Post1 from '../components/Post1';
 import Post2 from '../components/Post2';
+import Header from '../components/Header';
 import Avatar from '../assets/avatar.png';
 
 export default function Home(props) {
@@ -156,19 +157,26 @@ export default function Home(props) {
   ]);
 
   return (
-    <FlatList
-      data={posts}
-      style={styles.flatList}
-      showsVerticalScrollIndicator={false}
-      keyExtractor={(item, index) => String(index)}
-      renderItem={({ item }) =>
-        item.imageType ? <Post2 {...item} /> : <Post1 {...item} />
-      }
-    />
+    <SafeAreaView style={styles.screen}>
+      <Header {...props} />
+      <FlatList
+        data={posts}
+        style={styles.flatList}
+        showsVerticalScrollIndicator={false}
+        keyExtractor={(item, index) => String(index)}
+        renderItem={({ item }) =>
+          item.imageType ? <Post2 {...item} /> : <Post1 {...item} />
+        }
+      />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: GLOBALS.Styles.backgroundColor,
+  },
   flatList: {
     flex: 1,
     backgroundColor: GLOBALS.Styles.backgroundColor,

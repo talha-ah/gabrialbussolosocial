@@ -14,7 +14,6 @@ import UserLight from '../assets/icons/user-light.png';
 import UserFill from '../assets/icons/user-fill.png';
 
 import Home from '../screens/Home';
-import Header from '../components/Header';
 
 const styles = StyleSheet.create({
   icon: {
@@ -47,12 +46,12 @@ const Tab = createBottomTabNavigator();
 export default function BottomBar(props) {
   return (
     <>
-      <Header {...props} />
       <Tab.Navigator
         shifting="false"
         activeColor="#fff"
         initialRouteName="Home"
         tabBarOptions={barStyle}
+        lazy={false}
       >
         <Tab.Screen
           name="Home"
